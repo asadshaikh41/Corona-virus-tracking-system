@@ -6,7 +6,7 @@ import Lineargraph from "./components/LineGraph";
 import axios from "./axios";
 function App() {
   const [totalConfirmed, setTotalConfirmed] = useState(0);
-  const [totalRecovered, set                zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz] = useState(0);
+  const [totalRecovered, setTotalRecovered] = useState(0);
   const [totalDeaths, setTotalDeaths] = useState(0);
   const [loading, setloading] = useState(false);
   //craete state value of Covidsummary
