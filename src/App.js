@@ -1,12 +1,12 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import CovidSummary from "./components/CovidSummary";
-import LineGraph from "./components/LineGraph";
+import Covidsummary from "./components/CovidSummary";
+import Lineargraph from "./components/LineGraph";
 //import axios from './axios';
 import axios from "./axios";
 function App() {
   const [totalConfirmed, setTotalConfirmed] = useState(0);
-  const [totalRecovered, setTotalRecovered] = useState(0);
+  const [totalRecovered, set                zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz] = useState(0);
   const [totalDeaths, setTotalDeaths] = useState(0);
   const [loading, setloading] = useState(false);
   //craete state value of Covidsummary
@@ -16,7 +16,6 @@ function App() {
   //Hooks Component(Component Did mount)
   const[coronaCountAr,setCoronaCountAr]=useState([]);
  const [label, setLabel]=useState([]);
-
   useEffect(() => {
     // here we call the api
     setloading(true);
@@ -106,13 +105,11 @@ function App() {
 
   return (
     <div className="App">
-      <CovidSummary
-      totalConfirmed = {totalConfirmed}
-      totalRecovered = {totalRecovered}
-      totalDeaths = {totalDeaths}
-
-
-       
+      <Covidsummary
+        totalConfirmed={totalConfirmed}
+        totalRecovered={totalRecovered}
+        totalDeaths={totalDeaths}
+        country={country}
       />
       {/* we are going to set input handler */}
       <div style={{ textAlign: "center" }}>
@@ -129,7 +126,7 @@ function App() {
           <option value="90">last 90 days</option>
         </select>
       </div>
-      <LineGraph
+      <Lineargraph
       yAxis={coronaCountAr}
       label={label}
      />
